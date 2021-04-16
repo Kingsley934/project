@@ -2,14 +2,14 @@
 <html>
 
 <style type="text/css">
-#king {max-height:50px;
+.king {max-height:50px;
 	max-width: 50px;
 }
 #babe {} 
 
 <stysle>
 
-<div id="king"><img src="king.jpg" /></div>
+<div class="king"><img src="king.jpg" /></div>
 <div id="babe"><img src="babe.jpg" /></div>
 
 </html>
