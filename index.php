@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <style type="text/css">
-p {font-size:20;}
+p {font-size:20px;}
 </style>
 
 <html>
