@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
-<p>this is true</p>
-<p>this is false</p>
+<img src="king.jpg" />
+<img src="babe.jpg" />
 </html>
 
 <?php
