@@ -1,17 +1,6 @@
-<!DOCTYPE html>
-<html>
-<style type="text/css">
-img {max-height:50px;
-	max-width:50px;}
-</style>
-
-<p>This picture</p>
-<img src="king.jpg" />
-
-</html>
 
 <?php
- echo "Welcome Mr. Goliath";
+ echo "Hey <b>Pemphero</b>, I just want to let you know that your the lady of my dreams. i <b>love</b> you!";
 
 ?>
 
