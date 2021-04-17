@@ -17,6 +17,8 @@ a:visited {color:green;}
 <body>
 <p>We all make mistakes and am one of those who always believe that am not always perfect. This is why I have humbled myself because my ego has no value but you. Am sorry for everything that happened the day we argued.</p>
 <p>People misunderstand each other but things should be talked over and life should keep moving.</p>
+<br/>
+<p>Click the link below to check the owner of the message...</p>
 <h3><a href="trial2.php">This message goes to you</a></h3>
 </body>
 </html>
