@@ -9,19 +9,20 @@ $lastname  = "";
 $age       = "";
 $counter =0;
 
-if ($text == "") {
+if ($text == "" && $counter ==0) {
     // This is the first request. Note how we start the response with CON
+    $counter = $counter + 1;
     $response  = "CON Welcome to the MUST registration site center\n";
     $response.="Enter your firstname";
 
-}else if ($text != "" && $counter ==0) {
+}else if ($text != "" && $counter ==1) {
     // Business logic for first level response
     $firstname = $text;
     $counter = $counter + 1;
     $response = "CON Enter your lastname\n";
     
 
-}else if ($firstname != "" && $counter ==1) {
+}else if ($firstname != "" && $counter ==2) {
     // Business logic for first level response
     // This is a terminal request. Note how we start the response with END
     $firstname_length = strlen($firstname)+1;
@@ -29,7 +30,7 @@ if ($text == "") {
     $counter = $counter + 1;
     $response = "CON Enter your age";
 
-}else if($lastname != "" && $counter ==2) { 
+}else if($lastname != "" && $counter ==3) { 
     // This is a second level response where the user selected 1 in the first instance
     $lastname_length = strlen($lastname) + 1;
     $age = substr($text,$firstname_length+$lastname_length);
