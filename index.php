@@ -4,29 +4,34 @@ $sessionId   = $_POST["sessionId"];
 $serviceCode = $_POST["serviceCode"];
 $phoneNumber = $_POST["phoneNumber"];
 $text        = $_POST["text"];
+$firstname = "";
+$lastname  = "";
+$age       = "";
 
 if ($text == "") {
     // This is the first request. Note how we start the response with CON
-    $response  = "CON What would you want to check \n";
-    $response .= "1. My Account \n";
-    $response .= "2. My phone number";
+    $response  = "CON Welcome to the MUST registration site \n";
+    $response.="Enter your firstname";
 
-} else if ($text == "1") {
+} else if ($text != "") {
     // Business logic for first level response
-    $response = "CON Choose account information you want to view \n";
-    $response .= "1. Account number \n";
+    $firstname = $text
+    $response = "CON Enter your lastname\n";
 
-} else if ($text == "2") {
+} else if ($firstname != "") {
     // Business logic for first level response
     // This is a terminal request. Note how we start the response with END
-    $response = "END Your phone number is ".$phoneNumber;
+    $firstname_length = strlen($firstname)+1;
+    $lastname = substr($text,$firstname_length);
+    $response = "CON Enter your age";
 
-} else if($text == "1*1") { 
+} else if($lastname != "") { 
     // This is a second level response where the user selected 1 in the first instance
-    $accountNumber  = "ACC1001";
+    $lastname_length = strlen($lastname) + 1;
+    $age = substr($text,$firstname_length+$lastname_length);
 
     // This is a terminal request. Note how we start the response with END
-    $response = "END Your account number is ".$accountNumber;
+    $response = "END $firstname $lastname is aged $age";
 
 }
 
