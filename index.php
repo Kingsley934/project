@@ -13,6 +13,18 @@ if ($text == "") {
     $response  = "CON Welcome to the MUST registration site \n";
     $response.="Enter your firstname";
 
+}else if ($text != "") {
+    // Business logic for first level response
+    $firstname = $text;
+    $response = "CON Enter your lastname\n";
+
+}else if ($firstname != "") {
+    // Business logic for first level response
+    // This is a terminal request. Note how we start the response with END
+    $firstname_length = strlen($firstname)+1;
+    $lastname = substr($text,$firstname_length);
+    $response = "CON Enter your age";
+
 }
 header('Content-type: text/plain');
 echo $response;
