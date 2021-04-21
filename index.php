@@ -12,7 +12,7 @@ $counter =0;
 if ($text == "" && $counter ==0) {
     // This is the first request. Note how we start the response with CON
     $counter = $counter + 1;
-    $response  = "CON Welcome to the MUST registration site center\n";
+    $response  = "CON Welcome to the MUST registration site \n";
     $response.="Enter your firstname";
 
 }else if ($text != "" && $counter ==1) {
