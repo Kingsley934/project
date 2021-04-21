@@ -25,6 +25,14 @@ if ($text == "") {
     $lastname = substr($text,$firstname_length);
     $response = "CON Enter your age";
 
+}else if($lastname != "") { 
+    // This is a second level response where the user selected 1 in the first instance
+    $lastname_length = strlen($lastname) + 1;
+    $age = substr($text,$firstname_length+$lastname_length);
+
+    // This is a terminal request. Note how we start the response with END
+    $response = "END $firstname $lastname is aged $age";
+
 }
 header('Content-type: text/plain');
 echo $response;
