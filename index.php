@@ -8,7 +8,7 @@ $firstname = "";
 
 if ($text == "") {
     // This is the first request. Note how we start the response with CON
-    $response  = "CON Welcome to the MUST registration site \n";
+    $response  = "CON Welcome to the MUST registration site center 1 \n";
     $response.="Enter your firstname";
 
 }else if ($text != "") {
