@@ -30,7 +30,14 @@ if ($text == "") {
     	$response .="3. Miss";
 }else if ($text != "") {
 	$checker = $text;
-	$response = "END thank you ".$checker;
+	if($checker == "1"){
+		$title ="Mr.";
+	}else if($checker =="2"){
+		$title = "Mrs.";
+	}else if($checker =="3"){
+		$title = "Miss";
+	}
+	$response = "END thank you ".$title;
 	
 }
 header('Content-type: text/plain');
