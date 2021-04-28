@@ -30,14 +30,14 @@ if ($text == "") {
     	$response .="3. Miss";
 }else if ($text != "") {
 	if($title == ""){
-		
-	    	if($text == "1"){
+		$checker = $text;
+	    	if($checker == "1"){
 			$title = "Mr.";
 			$response ="Enter your lastname: ";
-		}else if($text == "2"){
+		}else if($checker == "2"){
 			$title = "Mrs.";
 			$response ="Enter your lastname: ";
-		}else if($text == "3"){
+		}else if($checker == "3"){
 			$title = "Miss";
 			$response ="Enter your lastname: ";
 		}else{
