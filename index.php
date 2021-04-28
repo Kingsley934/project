@@ -22,7 +22,7 @@ $teachers_length = null;
 
 if ($text == "") {
 	// This is the first request. Note how we start the response with CON
-    	$response  = "CON TONSE Training Programme \n";
+    	$response  = "CON TONSE Training Programmes \n";
     	$response  .= "Welcome, please provide accurate information\n";
     	$response.="Choose your title below: \n";
     	$response .="1. Mr\n";
@@ -41,7 +41,7 @@ if ($text == "") {
 			$response ="END invalid input, please try again...!";
 		}
 		$title_length = strlen($title);
-	}else if($name ==""){
+	}else if($title !=""){
 		$response = "END thank you ".$title." ".$title_length;
 	}
 	
