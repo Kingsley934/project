@@ -41,7 +41,7 @@ if ($text == "") {
 			$response ="END invalid input, please try again...!";
 		}
 		$title_length = strlen($title);
-	}else if($title != "" && $name ==""){
+	}else if($name ==""){
 		$response = "END thank you ".$title." ".$title_length;
 	}
 	
