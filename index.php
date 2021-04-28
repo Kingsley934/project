@@ -8,14 +8,13 @@ $firstname = "";
 
 if ($text == "") {
     // This is the first request. Note how we start the response with CON
-    $response  = "CON Welcome to the MUST registration site center 1 \n";
+    $response  = "CON Welcome Goliath Trucking registration site\n";
     $response.="Enter your firstname";
 
 }else if ($text != "") {
     // Business logic for first level response
     $firstname = $text;
-    $response = "END Your name is $firstname\n";
-    $response = "Thank You for Using our system";
+    $response = "END Thank you for using our system \n";
 }
 header('Content-type: text/plain');
 echo $response;
