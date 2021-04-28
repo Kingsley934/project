@@ -37,10 +37,13 @@ if ($text == "") {
 			$title = "Mrs.";
 		}else if($checker =="3"){
 			$title = "Miss";
+		}else{
+			$response ="END invalid input, please try again...!";
 		}
+		$title_length = strlen($title);
 	}
 	
-	$response = "END thank you ".$title;
+	$response = "END thank you ".$title." ".$title_length;
 	
 }
 header('Content-type: text/plain');
