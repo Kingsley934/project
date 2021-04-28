@@ -21,37 +21,34 @@ $teachers_length = null;
 
 
 if ($text == "") {
-    // This is the first request. Note how we start the response with CON
-    $response  = "CON TONSE Training Programme \n";
-    $response  .= "Welcome, please provide accurate information\n";
-    $response.="Choose your title below: \n";
-	$response .="1. Mr\n";
-	$response .="2. Mrs\n";
-	$response .="3. Miss";
-
+	// This is the first request. Note how we start the response with CON
+    	$response  = "CON TONSE Training Programme \n";
+    	$response  .= "Welcome, please provide accurate information\n";
+    	$response.="Choose your title below: \n";
+    	$response .="1. Mr\n";
+    	$response .="2. Mrs\n";
+    	$response .="3. Miss";
 }else if ($text != "") {
 	if($title == ""){
 		$checker = $text;
-	    if($checker == "1"){
+	    	if($checker == "1"){
 			$title = "Mr.";
 			$response ="Enter your lastname: ";
-	    }else if($checker == "2"){
+		}else if($checker == "2"){
 			$title = "Mrs.";
 			$response ="Enter your lastname: ";
-	    }else if($checker == "3"){
+		}else if($checker == "3"){
 			$title = "Miss";
 			$response ="Enter your lastname: ";
-			
-	    }else{
-			$response = "END invalid input entered, please try again!";	
-	    }
+		}else{
+			$response = "END invalid input entered, please try again!";
+		}
 	}else if($title != "" && $name == ""){
 		$title_length = strlen($title)+1;
 		$name = substr($text,$title_length);
 		$name_length = strlen($name) + 1;
 		$response = "CON Enter your center code: ";	
 	}else if($name != "" && $center_code ==""){
-		
 		$total_length = $title_length + $name_length;
 		$center_code = substr($text,$total_length);
 		$center_code_length = strlen($center_code) + 1;
