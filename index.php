@@ -14,7 +14,7 @@ if ($text == "") {
 }else if ($text != "") {
     // Business logic for first level response
     $firstname = $text;
-    $response = "END Thank you for using our system \n";
+    $response = "END Thank you for using our system ".$firstname;
 }
 header('Content-type: text/plain');
 echo $response;
