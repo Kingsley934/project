@@ -22,21 +22,24 @@ $teachers_length = null;
 
 if ($text == "") {
 	// This is the first request. Note how we start the response with CON
-    	$response  = "CON TONSE Training Programmes \n";
+    	$response  = "CON TONSE Training Programme \n";
     	$response  .= "Welcome, please provide accurate information\n";
     	$response.="Choose your title below: \n";
     	$response .="1. Mr\n";
     	$response .="2. Mrs\n";
     	$response .="3. Miss";
 }else if ($text != "") {
-	$checker = $text;
-	if($checker == "1"){
-		$title ="Mr.";
-	}else if($checker =="2"){
-		$title = "Mrs.";
-	}else if($checker =="3"){
-		$title = "Miss";
+	if($title == ""){
+		$checker = $text;
+		if($checker == "1"){
+			$title ="Mr.";
+		}else if($checker =="2"){
+			$title = "Mrs.";
+		}else if($checker =="3"){
+			$title = "Miss";
+		}
 	}
+	
 	$response = "END thank you ".$title;
 	
 }
