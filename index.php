@@ -31,6 +31,7 @@ if ($text == "") {
 }else if ($text != "") {
 	if($title == ""){
 		$checker = $text;
+		$text =="";
 		if($checker == "1"){
 			$title ="Mr.";
 		}else if($checker =="2"){
@@ -41,7 +42,7 @@ if ($text == "") {
 			$response ="END invalid input, please try again...!";
 		}
 		$title_length = strlen($title);
-	}else if($text != $title){
+	}else if($text != ""){
 		$response = "END thank you ".$title." ".$title_length;
 	}
 	
