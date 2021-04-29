@@ -3,21 +3,8 @@
 $sessionId   = $_POST["sessionId"];
 $serviceCode = $_POST["serviceCode"];
 $phoneNumber = $_POST["phoneNumber"];
+$counter = 0;
 $text        = $_POST["text"];
-
-//application variables
-$title = "";
-$title_length = null;
-$name  = "";
-$name_length = null;
-$center_code = "";
-$center_code_length = null;
-$female_children = "";
-$female_children_length =null;
-$male_children   = "";
-$male_children_length = null;
-$teachers="";
-$teachers_length = null;
 
 
 if ($text == "") {
@@ -29,21 +16,23 @@ if ($text == "") {
     	$response .="2. Mrs\n";
     	$response .="3. Miss";
 }else if ($text != "") {
-	if($title == ""){
+	if($counter == 0){
 		$checker = $text;
-		$text =="";
 		if($checker == "1"){
-			$title ="Mr.";
+			$GLOBALS['title'] ="Mr.";
+			$counter = $counter +1;
 		}else if($checker =="2"){
-			$title = "Mrs.";
+			$GLOBALS['title'] = "Mrs.";
+			$counter = $counter +1;
 		}else if($checker =="3"){
-			$title = "Miss";
+			$GLOBALS['title'] = "Miss";
+			$counter = $counter +1;
 		}else{
 			$response ="END invalid input, please try again...!";
 		}
-		$title_length = strlen($title);
-	}else if($text != ""){
-		$response = "END thank you ".$title." ".$title_length;
+		$GLOBALS['title_length'] = strlen($GLOBALS['title'];
+	}else if($counter == 1){
+		$response = "END thank you ".$GLOBALS['title']." ".$GLOBALS['title_length'];
 	}
 	
 	
