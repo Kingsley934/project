@@ -15,6 +15,11 @@ if ($text == "") {
     	$response   .= "2. Mrs\n";
     	$response   .= "3. Miss";
 	
+}else if($text != ""){
+	if(strlen($text) == 1){
+		$checker = $text;
+	}
+
 }
 header('Content-type: text/plain');
 echo $response;
