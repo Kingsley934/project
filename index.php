@@ -16,7 +16,7 @@ if ($text == "") {
     	$response .="2. Mrs\n";
     	$response .="3. Miss";
 }else if ($text != "") {
-	if($counter == 0){
+	if($GLOBALS['counter'] == 0){
 		$checker = $text;
 		if($checker == "1"){
 			$GLOBALS['title'] ="Mr.";
@@ -31,7 +31,7 @@ if ($text == "") {
 			$response ="END invalid input, please try again...!";
 		}
 		$GLOBALS['title_length'] = strlen($GLOBALS['title'];
-	}else if($counter == 1){
+	}else if($GLOBALS['counter'] == 1){
 		$response = "END thank you ".$GLOBALS['title']." ".$GLOBALS['title_length'];
 	}
 	
