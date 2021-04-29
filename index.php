@@ -8,7 +8,7 @@ $text        = $_POST["text"];
 
 if ($text == "") {
 	// This is the first request. Note how we start the response with CON
-    	$response    = "CON TONSEFE Training Programme \n";
+    	$response    = "CON TONSEFE Training Programmes \n";
     	$response   .= "Welcome, please provide accurate information\n";
     	$response   .= "Choose your title below: \n";
     	$response   .= "1. Mr\n";
@@ -25,7 +25,7 @@ if ($text == "") {
 		}else if($checker == "3"){
 			$GLOBALS['title'] = "Miss";
 		}
-	}else if($GLOBALS['title'] != null){
+	}else if($GLOBALS['title'] == "Mr."){
 		$response = "END Thank you for using our system ".$GLOBALS['title']; 
 	
 	}
