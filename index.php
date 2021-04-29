@@ -1,4 +1,7 @@
 <?php
+$title = null;
+$name  = null;
+
 // Read the variables sent via POST from our API
 $sessionId   = $_POST["sessionId"];
 $serviceCode = $_POST["serviceCode"];
@@ -8,7 +11,7 @@ $text        = $_POST["text"];
 
 if ($text == "") {
 	// This is the first request. Note how we start the response with CON
-    	$response    = "CON TONSEFE Training Programmes \n";
+    	$response    = "CON TONSEFE Training Programme \n";
     	$response   .= "Welcome, please provide accurate information\n";
     	$response   .= "Choose your title below: \n";
     	$response   .= "1. Mr\n";
@@ -31,7 +34,7 @@ if ($text == "") {
 			$response = "END Invalid input entered...";
 		}
 	}else if(strlen($text) > 1){
-		$response = "END Thank you for using our system ".$title; 
+		$response = "END Thank you for using our system ".$GLOBALS['title']; 
 	
 	}
 
