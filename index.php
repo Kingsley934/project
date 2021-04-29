@@ -18,6 +18,13 @@ if ($text == "") {
 }else if($text != ""){
 	if(strlen($text) == 1){
 		$checker = $text;
+		if($checker == "1"){
+			$GLOBALS['title'] = "Mr.";
+		}else if($checker == "2"){
+			$GLOBALS['title'] = "Mrs.";
+		}else if($checker == "3"){
+			$GLOBALS['title'] = "Miss";
+		}
 	}
 
 }
