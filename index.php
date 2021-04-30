@@ -24,7 +24,7 @@ if(isset($text)){
 			'national_id'=>$level[3]
 		);
 		
-		$response = "END Thank you ".$level[1]." for registering.\nWe will keep you updated";
+		$response = "END Thank you for registering.We will keep you updated ".$level[1].", ".$level[2].", ".$level[3];
 	}
 	
 header('Content-type: text/plain');
