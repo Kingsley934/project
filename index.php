@@ -1,33 +1,34 @@
-<?php
-// Read the variables sent via POST from our API
-$sessionId   = $_POST["sessionId"];
-$serviceCode = $_POST["serviceCode"];
-$phoneNumber = $_POST["phoneNumber"];
-$text        = $_POST["text"];
+<!DOCTYPE html>
+<html>
+<head>
+<style type = "text/css">
 
-$level = explode("*",$text);
+	body {font-size:20px;}
+	a:link     {color:red;
+		        text-decoration:underline;}
+	a:visited  {color:green;}
+	a:active   {background-color:orange;}
+	a:hover    {background-color:blue;
+		        color:white;
+			    text-decoration:none;
+			    font-weight:bold;}
+			
+			
+	
+	#fifth{background-color:red;
+		   color:white;}
+	
+			
+</style>
+</head>
 
-if(isset($text)){
-	if($text == ""){
-		$response = "CON Welcome to the registration portal.\nPlease enter your full name";
-	}
-	
-	if(isset($level[0]) && $level[0] !="" && !isset($level[1])){
-		$response = "CON Hi ".$level[0].", enter your ward name";
-	}else if(isset($level[1]) && $level[1] !="" && !isset($level[2])){
-		$response = "CON Please enter your national ID number";
-	}else if(isset($level[2]) && $level[2] !="" && !isset($level[3])){
-		$data = array(
-			'phonenumber'=>$phoneNumber, 
-			'fullname'=>$level[1], 
-			'electoral_ward' =>$level[2],
-			'national_id'=>$level[3]
-		);
-		
-		$response = "END Thank you for registering.We will keep you updated ".$level[1].", ".$level[2].", ".$level[3];
-	}
-	
-header('Content-type: text/plain');
-echo $response;
-}
-?>
+<body>
+<div id="first"><p>On a day like this, the world gave me a special person in the name of love. She's very lovely, elegant, adorable and gorgeous.</p></div>
+<div id="second"><p>She's my rose flower and guess what, her name is Rose too</p></div>
+<div id="third"><p>I don't think I can find the right words to describe how important and how good you are in my life because i don't think there would be such words </p></div>
+<div id="fourth"><p>Distance has kept us apart on this special day, just know that am always with you everyday,everytime for you are the only person I think about.</p></div>
+<div id="fifth"><p>Am so happy for you on this day, happy birthday my babe</p></div>
+<div id="sixth"><a href="second.php">Check link below</a></div>
+</body>
+
+</html>
