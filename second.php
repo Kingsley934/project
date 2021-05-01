@@ -16,6 +16,6 @@
 <body>
 <img src="rose3.jpg" />
 <p><b>Happy birthday babe</b>. Beauty and smartness combined itself on a day like this to form this angel. To more years of laughter, annoyance and all. I love you Rose</p>
-<a href="third.index">Check other photos</a>
+<a href="third.php">Check other photos</a>
 </body>
 </html>
