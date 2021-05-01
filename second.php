@@ -2,6 +2,8 @@
 <html>
 <head>
 <style type="text/css">
+	
+	body{ font-size:20px;}
 	a:link     {color:red;
 		        text-decoration:underline;}
 	a:visited  {color:green;}
