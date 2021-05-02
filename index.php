@@ -21,7 +21,6 @@ if(isset($text)){
 		
 		}else{
 			$response = "CON Enter your First Name: ";
-		
 		}
 		
 	}else if(isset($level[1]) && $level[1] !="" && !isset($level[2])){
