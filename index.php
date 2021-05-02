@@ -9,7 +9,7 @@ $level = explode("*",$text);
 
 if(isset($text)){
 	if($text == ""){
-		$response = "CON TONSEFE Training Programmes \nProvide us with accurate information\n\n Choose your title below";
+		$response = "CON TONSEFE Training Programmes \nProvide us with accurate information\n\n Choose your title below:\n";
 		$response .= "1. Mr\n";
 		$response .= "2. Mrs\n";
 		$response .= "3. Miss\n";
