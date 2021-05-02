@@ -20,6 +20,13 @@ if(isset($text)){
 			$response = "END Invalid input. Please try Again!";
 		
 		}else{
+			if($level[0] == "1"){
+				$level[0]="Mr.";
+			}else if($level[0] == "2"){
+				$level[0] = "Mrs.";
+			}else if($level[0] == "3"){
+				$level[0] = "Miss";
+			}
 			$response = "CON Enter your First Name: ";
 		}
 		
@@ -76,7 +83,7 @@ if(isset($text)){
 		
 	}else if(isset($level[6]) && $level[6] !="" && !isset($level[7])){
 		if(is_numeric($level[6])){
-			$response = "CON Data Successfully Submitted!\n Thank you ".$level[0]." ".$level[2];
+			$response = "END Data Successfully Submitted!\n Thank you ".$level[0]." ".$level[2];
 		}else{
 			$response = "END Invalid input. Please try Again!";
 		}
